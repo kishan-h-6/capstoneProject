@@ -16,7 +16,7 @@ public class shoppingCartMain {
         customer1.addItemToCart("Milk",7);
         customer1.addItemToCart("orange",1);
 
-        customer1.addItemToCart("Milk",2);
+        customer1.addItemToCart("Milk",1);
         customer1.addItemToCart("Milk",3);
         customer1.removeItemFromCart("Milk",2);
 
