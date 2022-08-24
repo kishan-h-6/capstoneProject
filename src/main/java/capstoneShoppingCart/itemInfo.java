@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class itemInfo {
     public String itemName;
-    public int itemPrice;
+    public Double itemPrice;
     public static Map<String, Integer> map = new HashMap<>();
     public itemInfo() {
         addItemToShop("Milk",25);
@@ -17,7 +17,7 @@ public class itemInfo {
         itemInfo.map.put(itemName,price);
     }
 
-    public itemInfo(String itemName, int itemPrice) {
+    public itemInfo(String itemName, Double itemPrice) {
         this.itemName = itemName;
 
         this.itemPrice = itemPrice;
