@@ -54,7 +54,7 @@ public class shoppingCart extends itemInfo {
 
     public void addItemToCart(String itemName, int quantity) {
         try {
-            for (int i = 0; i < cartList.size(); i++) {
+            for (int i = 0; i < cartList.size(); i++) {     // adding items which is already present in the cart
                 if (cartList.get(i).get(0) == itemName) {
                     Integer tmp = Integer.valueOf((String) cartList.get(i).get(1));
                     cartList.get(i).set(1, Integer.toString(quantity + tmp));
@@ -65,12 +65,12 @@ public class shoppingCart extends itemInfo {
             }
 
 
-            ArrayList<String> tempCart = new ArrayList<String>();
-            tempCart.add(itemName);
+            ArrayList<String> tempCart = new ArrayList<String>();       // adding new item into the shopping cart
+            tempCart.add(itemName);                                     // cartList is a 2D list ,(name,quantity,price,totalItemCost)
             tempCart.add(Integer.toString(quantity));
             tempCart.add(Integer.toString(itemInfo.map.get(itemName)));
             tempCart.add(Integer.toString(itemInfo.map.get(itemName) * quantity));
-            cartList.add(tempCart);
+            cartList.add(tempCart);                                     // adding a temp list into the cartList
         } catch (Exception e) {
             System.out.println("Cannot add item : " + itemName + " which isn't present in the shop");
         }
