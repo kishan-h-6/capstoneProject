@@ -2,7 +2,7 @@ package capstoneFruitBasket;
 
 import java.util.ArrayList;
 
-public class fruitBowlMain {
+public class fruitBowlMain extends fruitSorting{
 
         public static void main(String[] args){
             fruitSorting fruitObject = new fruitSorting();
@@ -14,12 +14,12 @@ public class fruitBowlMain {
             fruitList.add(new fruits("Watermelon", "Green","Simple","Large"));
 
 
-            System.out.println(fruitSorting.sortBySize(fruitList));
+            System.out.println(sortBySize(fruitList));
             System.out.println("***************************");
-            fruitObject.clearArrayList();
-            System.out.println(fruitSorting.sortByColor(fruitList));
+            fruitObject.clearFruitBasket();
+            System.out.println(sortByColor(fruitList));
             System.out.println("***************************");
-            fruitObject.clearArrayList();
+            fruitObject.clearFruitBasket();
             System.out.println(fruitSorting.sortByType(fruitList));
 
         }
