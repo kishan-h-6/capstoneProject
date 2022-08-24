@@ -2,11 +2,11 @@ package capstoneShoppingCart;
 
 public class customerInfo extends shoppingCart{
     public String customerName;
-    public static int eWalletBalance;
+    public static Double eWalletBalance;
     public void displayEWalletBalance(){
         System.out.println("The Balance of Customer : "+customerName+" is Rs. "+eWalletBalance);
     }
-    public customerInfo(String customerName, int eWalletBalance) {
+    public customerInfo(String customerName, Double eWalletBalance) {
         this.customerName = customerName;
         this.eWalletBalance = eWalletBalance;
     }
@@ -18,20 +18,22 @@ public class customerInfo extends shoppingCart{
             System.out.println("******************");
             System.out.println("Checkout Process in progress : ");
             System.out.println("******************");
-          int tempBalance=geteWalletBalance();
+          double tempBalance=geteWalletBalance();
           if(total>=100){
               System.out.println("5% discount is applied");
-              System.out.print("Cost before discount "+total+" ");
+              System.out.println("Cost before discount : "+total+" ");
               total=total-(total/20);
-              System.out.println(" Cost after discount "+total);
+              System.out.println("Total Cost after discount : "+total);
               seteWalletBalance(tempBalance-total);
               shoppingCart.cartList.clear();
               total=0;
+              System.out.println("******************");
           }
           else {
               seteWalletBalance(tempBalance-total);
               shoppingCart.cartList.clear();
               total=0;
+
           }
         }
     }
@@ -42,11 +44,11 @@ public class customerInfo extends shoppingCart{
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
-    public static int geteWalletBalance() {
+    public static Double geteWalletBalance() {
         return eWalletBalance;
     }
 
-    public static void seteWalletBalance(int eWalletBalance) {
+    public static void seteWalletBalance(Double eWalletBalance) {
         customerInfo.eWalletBalance = eWalletBalance;
     }
     @Override
