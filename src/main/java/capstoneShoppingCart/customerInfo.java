@@ -20,6 +20,7 @@ public class customerInfo extends shoppingCart{
             System.out.println("******************");
           int tempBalance=geteWalletBalance();
           if(total>=100){
+              System.out.println("5% discount is applied");
               System.out.print("Cost before discount "+total+" ");
               total=total-(total/20);
               System.out.println(" Cost after discount "+total);
@@ -35,6 +36,7 @@ public class customerInfo extends shoppingCart{
         }
     }
     public String getCustomerName() {
+
         return customerName;
     }
     public void setCustomerName(String customerName) {
