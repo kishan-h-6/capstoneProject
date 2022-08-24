@@ -22,7 +22,7 @@ public class fruitSorting {
         return (" Small Fruits : "+topFruitList+"\n Medium Fruits : "+middleFruitList+ "\n Large Fruits : "+lastFruitList);
 
     }
-    public void clearArrayList(){
+    public void clearFruitBasket(){
         topFruitList.clear();
         middleFruitList.clear();
         lastFruitList.clear();
