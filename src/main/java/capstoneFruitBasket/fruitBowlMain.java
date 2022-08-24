@@ -13,7 +13,6 @@ public class fruitBowlMain extends fruitSorting{
             fruitList.add(new fruits("Strawberry", "Red","Aggregate","Small"));
             fruitList.add(new fruits("Watermelon", "Green","Simple","Large"));
 
-
             System.out.println(sortBySize(fruitList));
             System.out.println("***************************");
             fruitObject.clearFruitBasket();
