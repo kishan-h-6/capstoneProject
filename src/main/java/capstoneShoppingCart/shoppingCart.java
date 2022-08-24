@@ -4,7 +4,7 @@ import java.util.*;
 
 public class shoppingCart extends itemInfo {
 
-    static ArrayList<ArrayList> cartList = new ArrayList<ArrayList>();
+    static ArrayList<ArrayList> cartList = new ArrayList<>();
     static double total = 0;
 
     public void getTotal() {
@@ -27,7 +27,7 @@ public class shoppingCart extends itemInfo {
     public void checkMilkOffer() {
         for (int i = 0; i < cartList.size(); i++) {
             if (cartList.get(i).get(0) == "Milk") {
-                Double tmp = Double.valueOf((String) cartList.get(i).get(1));
+                double tmp = Double.valueOf((String) cartList.get(i).get(1));
                 System.out.println("Milk Offer Applied , With " + tmp + " Milk Get : " + tmp / 2 + " Milk Free!");
             }
         }
@@ -36,7 +36,7 @@ public class shoppingCart extends itemInfo {
     public void removeItemFromCart(String itemName, int quantity) {
         for (int i = 0; i < cartList.size(); i++) {
             if (cartList.get(i).get(0) == itemName) {
-                Integer tmp = Integer.valueOf((String) cartList.get(i).get(1));
+                int tmp = Integer.valueOf((String) cartList.get(i).get(1));
                 if ((tmp - quantity) <= 0) {
                     cartList.remove(i);
                     System.out.println("Object removed from cart completely");

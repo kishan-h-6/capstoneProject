@@ -2,7 +2,7 @@ package capstoneShoppingCart;
 
 public class customerInfo extends shoppingCart{
     public String customerName;
-    public static Double eWalletBalance;
+    public static double eWalletBalance;
     public void displayEWalletBalance(){
         System.out.println("The Balance of Customer : "+customerName+" is Rs. "+eWalletBalance);
     }
@@ -18,19 +18,19 @@ public class customerInfo extends shoppingCart{
             System.out.println("******************");
             System.out.println("Checkout Process in progress : ");
             System.out.println("******************");
-          double tempBalance=geteWalletBalance();
+          double tempBalance=getEWalletBalance();
           if(total>=100){
               System.out.println("5% discount is applied");
               System.out.println("Cost before discount : "+total+" ");
               total=total-(total/20);
               System.out.println("Total Cost after discount : "+total);
-              seteWalletBalance(tempBalance-total);
+              setEWalletBalance(tempBalance-total);
               shoppingCart.cartList.clear();
               total=0;
               System.out.println("******************");
           }
           else {
-              seteWalletBalance(tempBalance-total);
+              setEWalletBalance(tempBalance-total);
               shoppingCart.cartList.clear();
               total=0;
 
@@ -44,11 +44,11 @@ public class customerInfo extends shoppingCart{
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
-    public static Double geteWalletBalance() {
+    public static Double getEWalletBalance() {
         return eWalletBalance;
     }
 
-    public static void seteWalletBalance(Double eWalletBalance) {
+    public static void setEWalletBalance(Double eWalletBalance) {
         customerInfo.eWalletBalance = eWalletBalance;
     }
     @Override
