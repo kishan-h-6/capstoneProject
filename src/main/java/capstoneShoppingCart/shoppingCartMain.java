@@ -28,8 +28,9 @@ public class shoppingCartMain {
         customer1.checkoutShoppingCart();
         customer1.displayEWalletBalance();
 
-        customer2.displayEWalletBalance();
         customer2.addItemToCart("Milk",1);
+        customer2.removeItemFromCart("orange",1);
+        customer2.addItemToCart("Soda",1);
         customer2.displayShoppingCart();
         customer2.checkoutShoppingCart();
         customer2.displayEWalletBalance();
